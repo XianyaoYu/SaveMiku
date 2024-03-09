@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Miku</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="res/favicon.png">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="generateNew()">
+    <!--简介-->
+    <div id="intro" class="intro">
+        <h1>Save Miku</h1>
+        <span>Crack The Code For Save Miku</span>
+    </div>
+
+    <!--标题-->
+    <div class="header">
+        <span id="headerLabel">CAN YOU SAVE HATSUNE MIKU?</span>
+    </div>
+
+    <!--锁-->
+    <div class="lock-animation" id="lockAnimation">
+        <div class="lock-base">
+            <!--输入密码-->
+            <input type="number" id="guess1" autofocus="autofocus" oninput="onCodeInput(1)" onkeydown="return event.keyCode !== 69" placeholder="0">
+            <input type="number" id="guess2" autofocus="autofocus" oninput="onCodeInput(2)" onkeydown="return event.keyCode !== 69" placeholder="0">
+            <input type="number" id="guess3" autofocus="autofocus" oninput="onCodeInput(3)" onkeydown="return event.keyCode !== 69" placeholder="0">
+        </div>
+    </div>
+
+    <!--提示-->
+    <div class="hint-wrapper">
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint1">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #4CAF50">2 CORRECT BUT<br />
+WRONG PLACED</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint2">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #CCDB39">1 CORRECT AND<br />
+WELL PLACED</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint3">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #FEC007">1 CORRECT BUT<br />
+WRONG PLACED</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint4">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #FEC007">1 CORRECT BUT<br />
+WRONG PLACED</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint5">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #F44336">NOTHING IS<br />
+CORRECT</span>
+        </section>
+    </div>
+
+    <!--继续按钮-->
+    <button onclick="generateNew()" id="continueButton" class="continue-button">tsuzuku</button>
+    
+    <!--页脚-->
+    <footer class="footer">
+        <span id="answerLabel" onclick="revealAnswer()">MAJIKKU!</span>
+    </footer>
+</body>
+</html>
