@@ -111,7 +111,6 @@ function generateNew() {
     hint5.innerHTML = nothingIsCorrect[0] + " " + nothingIsCorrect[1] + " " + nothingIsCorrect[2];
 }
 
-// Masukkan nomor
 function onCodeInput(number) {
     var currentText = document.getElementById("guess" + number).value;
     if (currentText.length >= 2) {
